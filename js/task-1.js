@@ -111,7 +111,24 @@ const users =  [
 // Write code under this line
 const getUserNames = array => array.map(({name}) => name);
 
- console.log(getUserNames(users));
+console.log(getUserNames(users));
+ 
+// Ще раз для тих, хто ще плаває зі стрілочними ф-ціями.
+// Повна форма запису:
+// function getUserNames(users) {
+//   return users.map(function(user) {
+//     return user.name;
+//   });
+// }
+// Коротша форма запису, із деструктуризацією:
+// function getUserNames(users) {
+//   return users.map(function({ name }) {
+//     return name;
+//   });
+// }
+// І фінальна форма із стрілочною ф-цією:
+// const getUserNames = users => users.map(({ name }) => name);
+
 
 /* [
   "Moore Hensley",
